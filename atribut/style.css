@@ -1,22 +1,47 @@
+/* HEADER - display block */
 .header {
     background-color: #3368A0;
     font-family: "Courier New", Courier, monospace;
     font-weight: 600;
     font-size: large;
+    padding: 20px;
+    display: block;
 }
 
+
+/* DATA DIRI - display block */
 .data-diri {
     background-color: #66A3BF;
+    padding: 20px;
+    display: block;
 }
 
+
+/* TENTANG SAYA - display block */
 .tentang-saya {
     background-color: #C8DFDB;
+    padding: 20px;
+    display: block;
 }
 
+
+/* MEDIA SOSIAL - display inline-block */
 .media-sosial {
     background-color: #F2EFE7;
+    padding: 20px;
+    display: inline-block;
 }
 
+
+/* WEBSITE KAMPUS - display inline-block */
 .website-kampus {
     background-color: #F2EFE7;
+    padding: 20px;
+    display: inline-block;
+}
+
+
+/* LINK - display inline */
+a {
+    display: inline;
 }

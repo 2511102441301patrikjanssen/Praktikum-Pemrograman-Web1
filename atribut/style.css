@@ -1,565 +1,158 @@
-/* =========================
-   RESET
-========================= */
+/* WARNA UTAMA */
+:root {
+    --background: #F7F6F2;
+    --surface: #EFEDE7;
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    --text: #18202A;
+    --text-secondary: #69717C;
 
-html {
-    scroll-behavior: smooth;
+    --accent: #547792;
+    --accent-dark: #3E5F78;
+
+    --border: #DDDAD2;
+    --white: #FFFFFF;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #0b0b0b;
-    color: #ffffff;
+    background: var(--background);
+    color: var(--text);
 }
 
-
-/* =========================
-   NAVBAR
-========================= */
-
-nav {
-    max-width: 1200px;
-    height: 90px;
-
-    margin: auto;
-    padding: 0 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
+/* Navbar */
 .logo {
-    font-size: 26px;
-    font-weight: 800;
-}
-
-.nav-menu {
-    display: flex;
-    gap: 35px;
+    color: var(--text);
 }
 
 .nav-menu a {
-    color: #999;
-    text-decoration: none;
-
-    font-size: 14px;
-
-    transition: 0.3s;
+    color: var(--text-secondary);
 }
 
 .nav-menu a:hover {
-    color: white;
+    color: var(--accent);
 }
 
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    max-width: 1200px;
-    min-height: calc(100vh - 90px);
-
-    margin: auto;
-    padding: 60px 40px 100px;
-
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-
-    align-items: center;
-    gap: 70px;
+/* Tulisan kecil */
+.hello,
+.section-label {
+    color: var(--accent);
 }
 
-
-/* tulisan kecil */
-
-.hello {
-    color: #4f8cff;
-
-    font-size: 13px;
-    font-weight: bold;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 25px;
-}
-
-
-/* nama */
-
+/* Nama */
 .hero h1 {
-    font-size: clamp(65px, 8vw, 110px);
-
-    line-height: 0.88;
-
-    letter-spacing: -6px;
-
-    margin-bottom: 35px;
+    color: var(--text);
 }
 
 .hero h1 span {
-    color: #4f8cff;
+    color: var(--accent);
 }
-
-
-/* pekerjaan */
 
 .hero h2 {
-    font-size: 23px;
-
-    margin-bottom: 18px;
-
-    font-weight: 500;
+    color: var(--text);
 }
-
-
-/* deskripsi */
 
 .description {
-    color: #888;
-
-    line-height: 1.8;
-
-    max-width: 500px;
-
-    font-size: 16px;
+    color: var(--text-secondary);
 }
 
-
-/* =========================
-   BUTTON
-========================= */
-
-.hero-button {
-    display: flex;
-    gap: 15px;
-
-    margin-top: 35px;
-}
-
-.hero-button a {
-    padding: 15px 25px;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    transition: 0.3s;
-}
-
+/* Button */
 .btn-primary {
-    background: #4f8cff;
-    color: white;
+    background: var(--text);
+    color: var(--white);
 }
 
 .btn-primary:hover {
-    background: white;
-    color: black;
+    background: var(--accent);
 }
 
 .btn-secondary {
-    border: 1px solid #333;
-    color: white;
+    color: var(--text);
+    border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-    border-color: white;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
-
-/* =========================
-   FOTO
-========================= */
-
-.hero-photo {
-    position: relative;
-
-    width: 100%;
-    max-width: 430px;
-
-    margin-left: auto;
-}
-
+/* Background di belakang foto */
 .photo-background {
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    background: #4f8cff;
-
-    top: 20px;
-    left: 20px;
+    background: var(--accent);
 }
 
-.hero-photo img {
-    width: 100%;
-    height: 540px;
-
-    object-fit: cover;
-
-    position: relative;
-
-    z-index: 2;
-
-    filter: grayscale(15%);
-}
-
-
-/* label di foto */
-
+/* Label foto */
 .student-tag {
-    position: absolute;
+    background: var(--white);
+    color: var(--text);
 
-    z-index: 3;
-
-    bottom: 25px;
-    left: -35px;
-
-    padding: 15px 20px;
-
-    background: #111;
-
-    font-size: 13px;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
 .student-tag span {
-    color: #4f8cff;
-
-    margin-right: 8px;
+    color: var(--accent);
 }
 
-
-/* =========================
-   SECTION UMUM
-========================= */
-
-.section-label {
-    color: #4f8cff;
-
-    letter-spacing: 4px;
-
-    font-size: 12px;
-    font-weight: bold;
-
-    margin-bottom: 20px;
+/* Garis section */
+.about,
+.education,
+.contact,
+footer {
+    border-color: var(--border);
 }
 
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 150px 40px;
-
-    border-top: 1px solid #222;
-
-    display: grid;
-
-    grid-template-columns: 150px 1fr;
-
-    gap: 40px;
-}
-
+/* Nomor 01 */
 .section-number {
-    color: #333;
-
-    font-size: 80px;
-
-    font-weight: bold;
+    color: #DDDAD2;
 }
 
-.section-content {
-    max-width: 750px;
-}
-
+/* Judul */
 .section-content h2,
 .education > h2,
 .contact h2 {
-
-    font-size: clamp(45px, 6vw, 75px);
-
-    letter-spacing: -3px;
-
-    margin-bottom: 30px;
+    color: var(--text);
 }
 
 .section-content h2 span,
 .education > h2 span,
 .contact h2 span {
-
-    color: #4f8cff;
+    color: var(--accent);
 }
 
-.section-content > p:last-child {
-
-    color: #999;
-
-    font-size: 18px;
-
-    line-height: 1.9;
+/* Paragraf */
+.section-content > p:last-child,
+.contact > p:not(.section-label) {
+    color: var(--text-secondary);
 }
 
-
-/* =========================
-   EDUCATION
-========================= */
-
-.education {
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 140px 40px;
-
-    border-top: 1px solid #222;
-}
-
-.profile-grid {
-
-    margin-top: 70px;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    border-top: 1px solid #333;
-}
-
+/* Profile */
+.profile-grid,
 .profile-item {
-
-    padding: 35px 0;
-
-    border-bottom: 1px solid #333;
-}
-
-.profile-item:nth-child(odd) {
-
-    border-right: 1px solid #333;
-
-    padding-right: 40px;
-}
-
-.profile-item:nth-child(even) {
-
-    padding-left: 40px;
+    border-color: var(--border);
 }
 
 .profile-item p {
-
-    color: #666;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 12px;
+    color: #8B9198;
 }
 
 .profile-item h3 {
-
-    font-size: 21px;
-
-    font-weight: 500;
+    color: var(--text);
 }
 
-.university {
-
-    grid-column: span 2;
-
-    border-right: none !important;
-
-    padding-left: 0 !important;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 150px 40px;
-
-    border-top: 1px solid #222;
-}
-
-.contact > p:not(.section-label) {
-
-    max-width: 550px;
-
-    color: #888;
-
-    line-height: 1.8;
-
-    margin-bottom: 50px;
-}
-
+/* Contact */
 .contact-links {
-
-    max-width: 700px;
-
-    border-top: 1px solid #333;
+    border-color: var(--border);
 }
 
 .contact-links a {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    padding: 25px 5px;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-bottom: 1px solid #333;
-
-    font-size: 20px;
-
-    transition: 0.3s;
+    color: var(--text);
+    border-color: var(--border);
 }
 
 .contact-links a:hover {
-
-    padding-left: 20px;
-
-    color: #4f8cff;
+    color: var(--accent);
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
+/* Footer */
 footer {
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding: 35px 40px;
-
-    border-top: 1px solid #222;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    color: #555;
-
-    font-size: 12px;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 800px) {
-
-    nav {
-        padding: 0 20px;
-    }
-
-    .nav-menu {
-        gap: 15px;
-    }
-
-    .nav-menu a {
-        font-size: 12px;
-    }
-
-
-    .hero {
-
-        grid-template-columns: 1fr;
-
-        padding: 60px 20px 100px;
-    }
-
-    .hero h1 {
-
-        letter-spacing: -4px;
-    }
-
-    .hero-photo {
-
-        margin: 40px auto 0;
-    }
-
-    .hero-photo img {
-
-        height: 480px;
-    }
-
-
-    .about {
-
-        padding: 100px 20px;
-
-        grid-template-columns: 1fr;
-    }
-
-    .section-number {
-
-        font-size: 50px;
-    }
-
-
-    .education,
-    .contact {
-
-        padding: 100px 20px;
-    }
-
-
-    .profile-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-    .profile-item,
-    .profile-item:nth-child(odd),
-    .profile-item:nth-child(even) {
-
-        padding: 30px 0;
-
-        border-right: none;
-    }
-
-    .university {
-
-        grid-column: span 1;
-    }
-
-
-    footer {
-
-        margin: 0 20px;
-
-        padding: 30px 0;
-
-        gap: 20px;
-    }
+    color: var(--text-secondary);
 }
